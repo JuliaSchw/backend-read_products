@@ -3,7 +3,7 @@ import { StyledButton } from "@/components/Button/Button.styled";
 import useSWR from "swr";
 
 export default function ArtistForm() {
-  const { mutate } = useSWR("/api/products");
+  const { mutate } = useSWR("/api/artists");
 
   async function handleSubmit(event) {
     event.preventDefault();
