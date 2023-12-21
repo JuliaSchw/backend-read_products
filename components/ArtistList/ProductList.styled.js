@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledHeading = styled.h2`
   text-align: center;
-  color: var(--color-nemo);
+  color: var(--color-granite);
 `;
 
 export const StyledList = styled.ul`

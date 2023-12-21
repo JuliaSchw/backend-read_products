@@ -8,7 +8,7 @@ export const StyledForm = styled.form`
 
 export const StyledHeading = styled.h2`
   text-align: center;
-  color: var(--color-nemo);
+  color: var(--color-granite);
 `;
 
 export const StyledLabel = styled.label`

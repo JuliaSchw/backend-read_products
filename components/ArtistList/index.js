@@ -2,8 +2,8 @@ import useSWR from "swr";
 import { StyledHeading, StyledList } from "./ProductList.styled";
 import { StyledLink } from "../Link/Link.styled";
 
-export default function ProductList() {
-  const { data, isLoading } = useSWR("/api/products");
+export default function ArtistList() {
+  const { data, isLoading } = useSWR("/api/artists");
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -15,11 +15,11 @@ export default function ProductList() {
 
   return (
     <>
-      <StyledHeading>Available Fishes</StyledHeading>
+      <StyledHeading>Available Artists</StyledHeading>
       <StyledList>
-        {data.map((product) => (
-          <li key={product._id}>
-            <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
+        {data.map((artist) => (
+          <li key={artist._id}>
+            <StyledLink href={`/${artist._id}`}>{artist.name}</StyledLink>
           </li>
         ))}
       </StyledList>

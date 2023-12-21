@@ -1,5 +1,5 @@
-import Product from "../components/Product";
+import Artist from "../components/Artist";
 
-export default function ProductDetailsPage() {
-  return <Product />;
+export default function ArtistDetailsPage() {
+  return <Artist />;
 }

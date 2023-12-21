@@ -1,10 +1,10 @@
-import ProductList from "../components/ProductList";
+import ArtistList from "../components/ArtistList";
 import styled from "styled-components";
-import ProductForm from "@/components/Product/ProductForm";
+import ArtistForm from "@/components/ArtistForm";
 
 const Heading = styled.h1`
   text-align: center;
-  color: var(--color-nemo);
+  color: var(--color-granite);
 `;
 
 export default function HomePage() {
@@ -12,13 +12,14 @@ export default function HomePage() {
     <>
       <Heading>
         <span role="img" aria-label="A fish">
-          🐠
-        </span>
-        Fish Shop
+          👾 👾 👾
+        </span>{" "}
+        <br></br>
+        Artist Database
       </Heading>
-      <ProductForm />
+      <ArtistForm />
       <hr />
-      <ProductList />
+      <ArtistList />
     </>
   );
 }

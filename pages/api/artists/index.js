@@ -1,16 +1,16 @@
 import dbConnect from "@/db/connect";
-import Product from "@/db/models/Product";
+import Artist from "@/db/models/Artist";
 
 export default async function handler(request, response) {
   await dbConnect();
   try {
     if (request.method === "GET") {
-      const products = await Product.find();
-      return response.status(200).json(products);
+      const artists = await Artist.find();
+      return response.status(200).json(artists);
     } else if (request.method === "POST") {
-      const productData = request.body;
-      await Product.create(productData);
-      return response.status(201).json({ status: "Product created" });
+      const artistData = request.body;
+      await Artist.create(artistData);
+      return response.status(201).json({ status: "Artist created" });
     } else {
       return response.status(405).json({ message: "Method not allowed" });
     }
